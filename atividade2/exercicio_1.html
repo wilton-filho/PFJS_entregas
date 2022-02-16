@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        getAges = () => {
+            ages = [];
+            total = prompt("Quantas idades deseja ler? ");
+            for (i = 0; i < total; i++) ages.push(parseInt(prompt(`Idade ${i + 1}:`)));
+            return ages;
+        }
+        sumAges = (vet) => {
+            sum = 0;
+            for (i = 0; i < vet.length; i++) sum += vet[i];
+            return sum;
+        } 
+        main = () => {
+            vetAges = getAges();
+            console.log(sumAges(vetAges));
+        }
+        main();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        total = 0;
+        getAges = () => {
+            ages = [];
+            total = prompt("Quantas idades deseja ler? ");
+            for (i = 0; i < total; i++) ages.push(parseInt(prompt(`Idade ${i + 1}:`)));
+            return ages;
+        }
+        sumAges = (vet) => {
+            sum = 0;
+            for (i = 0; i < vet.length; i++) sum += vet[i];
+            return sum;
+        } 
+
+        avgAges = (soma) => {
+            console.log()
+            media = soma/total;
+            return "Média: " + media;
+        }
+
+        maiorIdade = (vet) => {
+            return "A maior idade é: " + Math.max.apply(null, vet);
+        }
+
+        findOdds = (vet) => {
+            impares = []
+            for (i = 0; i < vet.length; i++) {
+                if(vet[i]%2 !==0) {
+                    impares.push(vet[i]);
+                }
+            };
+            return "Ímpares: " + impares;
+        }
+
+        maiores = (vet) => {
+            maiores = true;
+            for (i = 0; i < vet.length; i++) {
+               if(vet[i] < 18) maiores = false;
+            };
+            return "Todos são maiores de idade: " + maiores;
+        }
+
+        maioresValor = (vet) => {
+            valor = prompt("Digite um valor para ver se as idades são maiores que ele: ");
+            maiores = true;
+            for (i = 0; i < vet.length; i++) 
+                if(vet[i] < valor) maiores = false;
+
+            return "As idade são maiores que " + valor + "? " + maiores;
+        }
+
+        avgMaiores21 = (vet) => {
+            soma = 0;
+            totalMaiores21 = 0;
+            for (i = 0; i < vet.length; i++) 
+                if(vet[i] > 21) {
+                    soma += vet[i];
+                    totalMaiores21 += 1;
+                }
+
+            media = soma/ totalMaiores21
+            return "Média das idades maiores de 21 anos: " + media;
+        }
+
+        main = () => {
+            vetAges = getAges();
+            soma = sumAges(vetAges);
+            //console.log("Soma: " + sumAges(vetAges));
+            console.log(avgAges(soma)); // a) A média aritmética simples das idades;
+            console.log(maiorIdade(vetAges)) // b) A maior idade;
+            console.log(findOdds(vetAges));  // c) As idades ímpares;
+            console.log(maiores(vetAges)); // d) Verificar se todos são maiores de idade (idade >= 18)
+            console.log(maioresValor(vetAges)); // e) Verificar se todas as idades são maiores ou iguais a um valor informado
+            console.log(avgMaiores21(vetAges)); // f) A média aritmética simples das idades das pessoas com mais de 21 anos
+        }
+        main();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html> 
