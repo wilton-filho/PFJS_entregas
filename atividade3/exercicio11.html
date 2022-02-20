@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+    
+    <script>
+        /*11. Proponha uma solução utilizando JavaScript para somar os valores ímpares de
+        determinado vetor. Sugestão: crie pelo menos três vetores com diversos valores numéricos e
+        utilize-os para testar a função.*/
+
+        vetor1 = [10,4,8,7,1,20]
+        vetor2 = [0,41,13,7,1,20]
+        vetor3 = [21,33,43,19,87]
+        somarImpares = vetor => vetor.filter(valor => valor % 2 != 0).reduce((soma, valorAtual) => soma + valorAtual)
+
+        document.write(`<p>${somarImpares(vetor1)}</p>`)
+        document.write(`<p>${somarImpares(vetor2)}</p>`)
+        document.write(`<p>${somarImpares(vetor3)}</p>`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

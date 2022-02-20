@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    
+    <script>
+        /*3. Proponha uma solução utilizando JavaScript para exibir no corpo de uma página web a média
+        aritmética simples dos valores armazenado em um vetor. A soma deverá ser exibida no corpo
+        da página. Sugestão: crie pelo menos três vetores com diversos valores numéricos e utilize-os
+        para testar a função.*/
+
+        vetor1 = [0,1,2,3,4,5,6,7,8,9]
+        vetor2 = [20,30,40,50,60]
+        vetor3 = [102,103,104,105,106,107,108,109,110,111]
+
+        calcularMedia = vet => (vet.reduce((soma, valorAtual) => soma + valorAtual)/vet.length).toFixed(2)
+
+        imprimir = (media, num) => document.write(`<p>A média do vetor ${num} é igual a ${media}</p>`)
+
+        imprimir(calcularMedia(vetor1), 1) 
+        imprimir(calcularMedia(vetor2), 2) 
+        imprimir(calcularMedia(vetor3), 3) 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

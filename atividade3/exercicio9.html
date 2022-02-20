@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+    
+    <script>
+        /*9. Proponha uma solução utilizando JavaScript para informar no corpo de uma página web o
+        número de elementos de um vetor que são maiores do que um valor de corte informado pelo
+        usuário. Sugestão: crie pelo menos três vetores com diversos valores numéricos e utilize-os
+        para testar a função.*/
+
+        vetor1 = [10,4,8,7,1,20]
+        vetor2 = [0,41,13,7,1,20]
+        vetor3 = [21,33,43,19,87]
+
+        valor = parseInt(prompt("Digite um valor para ser feito o corte: "))
+        
+        MaiorQueValor = (vetor, valor) => (vetor.filter(valorAtual => valorAtual >= valor))
+
+        document.write(`<p>Número de elemento maiores que o corte ${MaiorQueValor(vetor1, valor).length} : ${MaiorQueValor(vetor1, valor)}</p>`)
+        document.write(`<p>Número de elemento maiores que o corte ${MaiorQueValor(vetor2, valor).length} : ${MaiorQueValor(vetor2, valor)}</p>`)
+        document.write(`Número de elemento maiores que o corte ${MaiorQueValor(vetor3, valor).length} : ${MaiorQueValor(vetor3, valor)}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

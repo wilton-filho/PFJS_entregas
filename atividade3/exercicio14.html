@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+    
+    <script>
+        /*14. Solicitar N preços de produtos de uma loja, bem como os nomes de cada um deles. Em
+        seguida, ajustar os preços dos produtos conforme as regras abaixo:
+
+        • Preços entre R$ 2,00 e R$ 10,00 reais terão os preços acrescidos em 10%;
+        • Preços entre R$ 11,00 e R$ 100,00 reais terão os preços acrescidos em 15%;
+        • Preços acima de R$ 100,00 reais terão os preços acrescidos em 20%;
+        A página deverá exibir em uma tabela os nomes de todos os produtos lidos, bem como os preços
+        originais e os preços finais (após ajuste de preço)*/
+
+        produtos = [
+            {produto:"bola", preco:5.00},
+            {produto:"camiseta", preco:45.50},
+            {produto:"tv", preco:800.00}
+            ]
+        ajustarPrecos = listaProdutos => (listaProdutos.map(valor=>(valor.preco<=10)?valor.preco*1.1:(valor.preco<=100)?valor.preco*1.15:valor.preco*1.2));
+
+        produtosAjustados = ajustarPrecos(produtos)
+
+        imprimirPrecos = (produtos, produtosAjustados) => {
+            document.write(`<table style='border:1px solid black; border-collapse: collapse'>`)
+            document.write(`<th style='border:1px solid black; border-collapse: collapse'>Produto</th> <th style='border:1px solid black; border-collapse: collapse'>Preço original</th> <th style='border:1px solid black; border-collapse: collapse'>Preço final (ajustado)</th>`)
+            produtos.forEach((valor , indice) => document.write(`<tr> <td style='border:1px solid black; border-collapse: collapse'>${valor.produto}</td> <td style='border:1px solid black; border-collapse: collapse'>${valor.preco.toFixed(2)}</td> <td style='border:1px solid black; border-collapse: collapse'>${produtosAjustados[indice].toFixed(2)}</td></tr>`))
+            document.write("</table>")
+        }
+
+        imprimirPrecos(produtos, produtosAjustados)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
