@@ -2,32 +2,32 @@
     "users":[
         {
             "username": "Ana",
-            "score": 10,
+            "score": "10",
             "level": "Easy"
         },
         {
             "username": "José",
-            "score": 15,
+            "score": "15",
             "level": "Medium"
         },
         {
             "username": "Maria",
-            "score": 30,
+            "score": "30",
             "level": "Hard"
         },
         {
             "username": "Pedro",
-            "score": 20,
+            "score": "20",
             "level": "Medium"
         },
         {
             "username": "Joane",
-            "score": 20,
+            "score": "20",
             "level": "Easy"
         },
         {
             "username": "Gabriel",
-            "score": 50,
+            "score": "50",
             "level": "Hard"
         }
     ]
