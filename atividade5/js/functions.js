@@ -1,6 +1,6 @@
 botaoClicado = false
 visualizarRanking = async () => {   
-    dados = await fetch("../dadosRanking.json");
+    dados = await fetch("dadosRanking.json");
     conteudo = await dados.json()
     console.log(conteudo);
     if(botaoClicado == true) {
