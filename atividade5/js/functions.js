@@ -1,6 +1,7 @@
 botaoClicado = false
 visualizarRanking = async () => {   
-    dados = await fetch("../dadosRanking.json")
+    dados = await fetch("../dadosRanking.json");
+    console.log(dados);
     conteudo = await dados.json()
     if(botaoClicado == true) {
         var element = document.getElementById("cabecalho");
