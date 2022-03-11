@@ -1,8 +1,8 @@
 botaoClicado = false
 visualizarRanking = async () => {   
     dados = await fetch("../dadosRanking.json");
-    console.log(dados);
     conteudo = await dados.json()
+    console.log(conteudo);
     if(botaoClicado == true) {
         var element = document.getElementById("cabecalho");
         element.remove();
